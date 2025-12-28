@@ -23,8 +23,8 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
-import net.technic.snow_update.registry.SnowEntityRegistry;
-import net.technic.snow_update.registry.SnowSoundsRegistry;
+import net.technic.snow_update.init.SnowEntityRegistry;
+import net.technic.snow_update.init.SnowSoundsRegistry;
 
 public class IceChunkEntity extends Projectile {
 

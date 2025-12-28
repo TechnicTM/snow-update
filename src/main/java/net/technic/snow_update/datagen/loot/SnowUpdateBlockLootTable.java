@@ -6,7 +6,7 @@ import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.registries.RegistryObject;
-import net.technic.snow_update.registry.SnowBlockRegistry;
+import net.technic.snow_update.init.SnowBlockRegistry;
 
 public class SnowUpdateBlockLootTable extends BlockLootSubProvider{
 

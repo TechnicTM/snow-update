@@ -22,7 +22,7 @@ import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 import net.minecraft.world.level.levelgen.placement.PlacementModifier;
 import net.minecraft.world.level.levelgen.placement.RarityFilter;
 import net.technic.snow_update.SnowUpdate;
-import net.technic.snow_update.registry.SnowBlockRegistry;
+import net.technic.snow_update.init.SnowBlockRegistry;
 
 public class SnowUpdatePlacedFeatures {
     public static final ResourceKey<PlacedFeature> ICE_STALACTITE_PLACED = registerKey("ice_stalactite_placed");
@@ -43,6 +43,9 @@ public class SnowUpdatePlacedFeatures {
     public static final ResourceKey<PlacedFeature> LARGE_ICE_CRYSTAL_SPIKE_PLACED = registerKey("large_ice_crystal_spike_placed");
     public static final ResourceKey<PlacedFeature> FROZEN_POOL_PATCH_PLACED = registerKey("frozen_pool_patch_placed");
     public static final ResourceKey<PlacedFeature> FROZEN_SPRING_PLACED = registerKey("frozen_spring_placed");
+
+    public static final ResourceKey<PlacedFeature> FROSTWOOD_CHECKED_KEY = registerKey("frostwood_checked");
+    public static final ResourceKey<PlacedFeature> FROSTWOOD_SPAWN_KEY = registerKey("frostwood_spawn");
 
     public static ResourceKey<PlacedFeature> registerKey(String string) {
         return ResourceKey.create(Registries.PLACED_FEATURE, new ResourceLocation(SnowUpdate.MOD_ID, string));

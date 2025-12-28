@@ -5,7 +5,7 @@ import java.util.List;
 import net.minecraft.util.random.WeightedEntry;
 import net.technic.snow_update.worldgen.area.AreaContext;
 import net.technic.snow_update.worldgen.area.AreaTransformer0;
-import net.technic.snow_update.worldgen.utils.WeightedRandomList;
+import net.technic.snow_update.worldgen.util.WeightedRandomList;
 
 public abstract class WeightedRandomLayer<T extends WeightedEntry> implements AreaTransformer0 {
     private final WeightedRandomList<T> weightedEntries;

@@ -1,0 +1,89 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.unknown",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "peng",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "body",
+					"parent": "peng",
+					"pivot": [0, 4, 0],
+					"cubes": [
+						{"origin": [-4.5, 1, -4], "size": [9, 12, 6], "uv": [2, 2]}
+					]
+				},
+				{
+					"name": "head",
+					"parent": "body",
+					"pivot": [0, 13, 0],
+					"cubes": [
+						{"origin": [-3, 13, -5], "size": [6, 6, 7], "uv": [1, 25]},
+						{"origin": [-1, 14, -8], "size": [2, 2, 3], "uv": [27, 0]}
+					]
+				},
+				{
+					"name": "leftflipper",
+					"parent": "body",
+					"pivot": [5, 11, -0.5],
+					"cubes": [
+						{"origin": [4.5, 3, -3.5], "size": [1, 9, 5], "uv": [26, 38]}
+					]
+				},
+				{
+					"name": "rightflipper",
+					"parent": "body",
+					"pivot": [-5, 11, -0.5],
+					"cubes": [
+						{"origin": [-5.5, 3, -3.5], "size": [1, 9, 5], "uv": [26, 38], "mirror": true}
+					]
+				},
+				{
+					"name": "tail",
+					"parent": "body",
+					"pivot": [0, 2, 2],
+					"rotation": [-22.5, 0, 0],
+					"cubes": [
+						{"origin": [-3, 1, 1], "size": [6, 2, 4], "uv": [0, 40]}
+					]
+				},
+				{
+					"name": "egg",
+					"parent": "body",
+					"pivot": [0, 4, 0],
+					"cubes": [
+						{"origin": [-2, 1, -6], "size": [4, 6, 4], "uv": [37, 20]}
+					]
+				},
+				{
+					"name": "leftfoot",
+					"parent": "peng",
+					"pivot": [2, 1, 0],
+					"rotation": [0, -7.5, 0],
+					"cubes": [
+						{"origin": [0.5, 0, -5], "size": [3, 1, 6], "uv": [36, 10]}
+					]
+				},
+				{
+					"name": "rightfoot",
+					"parent": "peng",
+					"pivot": [-2, 1, 0],
+					"rotation": [0, 7.5, 0],
+					"cubes": [
+						{"origin": [-3.5, 0, -5], "size": [3, 1, 6], "uv": [36, 1]}
+					]
+				}
+			]
+		}
+	]
+}

@@ -10,8 +10,8 @@ import net.minecraft.world.level.LevelSimulatedReader;
 import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacerType;
-import net.technic.snow_update.registry.SnowBlockRegistry;
-import net.technic.snow_update.registry.SnowUpdateFoliagePlacerRegistry;
+import net.technic.snow_update.init.SnowBlockRegistry;
+import net.technic.snow_update.init.SnowUpdateFoliagePlacerRegistry;
 
 public class FrostwoodFoliagePlacer extends FoliagePlacer{
     public static final Codec<FrostwoodFoliagePlacer> CODEC = RecordCodecBuilder.create(pInstance -> foliagePlacerParts(pInstance)

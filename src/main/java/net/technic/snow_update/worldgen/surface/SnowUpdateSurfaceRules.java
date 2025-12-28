@@ -5,8 +5,8 @@ import org.jetbrains.annotations.NotNull;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.levelgen.SurfaceRules;
 import net.minecraft.world.level.levelgen.SurfaceRules.RuleSource;
-import net.technic.snow_update.registry.SnowBlockRegistry;
-import net.technic.snow_update.worldgen.biomes.SnowUpdateBiomes;
+import net.technic.snow_update.init.SnowBlockRegistry;
+import net.technic.snow_update.worldgen.biome.SnowUpdateBiomes;
 
 public class SnowUpdateSurfaceRules {
     private static final  SurfaceRules.RuleSource HOWLITE = makeStateRule(SnowBlockRegistry.HOWLITE.get());

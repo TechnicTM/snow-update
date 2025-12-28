@@ -13,9 +13,9 @@ import net.minecraft.world.entity.vehicle.Boat;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
-import net.technic.snow_update.registry.SnowBlockRegistry;
-import net.technic.snow_update.registry.SnowEntityRegistry;
-import net.technic.snow_update.registry.SnowItemsRegistry;
+import net.technic.snow_update.init.SnowBlockRegistry;
+import net.technic.snow_update.init.SnowEntityRegistry;
+import net.technic.snow_update.init.SnowItemsRegistry;
 
 public class SnowUpdateBoats extends Boat{
     private static final EntityDataAccessor<Integer> DATA_ID_TYPE = SynchedEntityData.defineId(Boat.class, EntityDataSerializers.INT);

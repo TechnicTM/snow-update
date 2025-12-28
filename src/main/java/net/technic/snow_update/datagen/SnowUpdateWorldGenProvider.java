@@ -13,7 +13,7 @@ import net.technic.snow_update.SnowUpdate;
 import net.technic.snow_update.worldgen.SnowUpdateBiomeModifiers;
 import net.technic.snow_update.worldgen.SnowUpdateConfigFeatures;
 import net.technic.snow_update.worldgen.SnowUpdatePlacedFeatures;
-import net.technic.snow_update.worldgen.biomes.SnowUpdateBiomes;
+import net.technic.snow_update.worldgen.biome.SnowUpdateBiomes;
 
 public class SnowUpdateWorldGenProvider extends DatapackBuiltinEntriesProvider{
 

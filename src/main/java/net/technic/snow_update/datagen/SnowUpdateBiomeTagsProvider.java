@@ -11,7 +11,7 @@ import net.minecraft.tags.BiomeTags;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.technic.snow_update.SnowUpdate;
-import net.technic.snow_update.worldgen.biomes.SnowUpdateBiomes;
+import net.technic.snow_update.worldgen.biome.SnowUpdateBiomes;
 
 public class SnowUpdateBiomeTagsProvider extends BiomeTagsProvider {
 

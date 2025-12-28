@@ -16,7 +16,7 @@ import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.event.ForgeEventFactory;
 import net.technic.snow_update.entity.TitanYetiEntity;
-import net.technic.snow_update.registry.SnowMemoryModulesRegistry;
+import net.technic.snow_update.init.SnowMemoryModulesRegistry;
 
 public class ChargeAttack extends Behavior<TitanYetiEntity>{
     private static final int DURATION = Mth.ceil(60.0F);

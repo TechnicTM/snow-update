@@ -8,7 +8,7 @@ import net.minecraftforge.client.event.RegisterColorHandlersEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.technic.snow_update.SnowUpdate;
-import net.technic.snow_update.registry.SnowBlockRegistry;
+import net.technic.snow_update.init.SnowBlockRegistry;
 
 @Mod.EventBusSubscriber(modid = SnowUpdate.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class ClientModEvents {

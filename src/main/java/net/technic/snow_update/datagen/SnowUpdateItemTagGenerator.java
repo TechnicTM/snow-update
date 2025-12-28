@@ -11,8 +11,8 @@ import net.minecraft.tags.ItemTags;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.technic.snow_update.SnowUpdate;
-import net.technic.snow_update.registry.SnowBlockRegistry;
-import net.technic.snow_update.registry.SnowItemsRegistry;
+import net.technic.snow_update.init.SnowBlockRegistry;
+import net.technic.snow_update.init.SnowItemsRegistry;
 
 public class SnowUpdateItemTagGenerator extends ItemTagsProvider {
 

@@ -10,7 +10,7 @@ import net.minecraft.tags.BlockTags;
 import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.technic.snow_update.SnowUpdate;
-import net.technic.snow_update.registry.SnowBlockRegistry;
+import net.technic.snow_update.init.SnowBlockRegistry;
 
 public class SnowUpdateBlockTagGenerator extends BlockTagsProvider{
 

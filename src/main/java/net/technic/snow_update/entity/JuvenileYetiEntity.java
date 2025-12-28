@@ -35,7 +35,7 @@ import net.minecraft.world.entity.raid.Raider;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.technic.snow_update.entity.ai.SnowBallThrowGoal;
-import net.technic.snow_update.registry.SnowSoundsRegistry;
+import net.technic.snow_update.init.SnowSoundsRegistry;
 
 public class JuvenileYetiEntity extends AbstractIllager implements RangedAttackMob {
 

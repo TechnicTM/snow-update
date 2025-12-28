@@ -24,10 +24,10 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.technic.snow_update.SnowUpdate;
-import net.technic.snow_update.blocks.GlacierIce;
-import net.technic.snow_update.blocks.KeyStone;
-import net.technic.snow_update.blocks.properties.SnowUpdateBlockProperties;
-import net.technic.snow_update.registry.SnowBlockRegistry;
+import net.technic.snow_update.block.GlacierIce;
+import net.technic.snow_update.block.KeyStone;
+import net.technic.snow_update.block.properties.SnowUpdateBlockProperties;
+import net.technic.snow_update.init.SnowBlockRegistry;
 
 public class SnowUpdateBlockStateProvider extends BlockStateProvider{
     

@@ -9,13 +9,14 @@ import net.minecraftforge.fml.common.Mod;
 import net.technic.snow_update.SnowUpdate;
 import net.technic.snow_update.entity.JuvenileYetiEntity;
 import net.technic.snow_update.entity.TitanYetiEntity;
-import net.technic.snow_update.entity.client.IceChunkEntityModel;
-import net.technic.snow_update.entity.client.JuvenileYetiModel;
-import net.technic.snow_update.entity.client.SnowBallModel;
-import net.technic.snow_update.entity.client.TitanYetiModel;
+import net.technic.snow_update.entity.client.ice_chunk.IceChunkEntityModel;
+import net.technic.snow_update.entity.PenguinEntity;
+import net.technic.snow_update.entity.client.yeti.juvenile.JuvenileYetiModel;
+import net.technic.snow_update.entity.client.snowball.SnowBallModel;
+import net.technic.snow_update.entity.client.yeti.titan.TitanYetiModel;
 import net.technic.snow_update.entity.client.armor.YetiArmorModel;
 import net.technic.snow_update.entity.layers.SnowUpdateLayers;
-import net.technic.snow_update.registry.SnowEntityRegistry;
+import net.technic.snow_update.init.SnowEntityRegistry;
 
 @Mod.EventBusSubscriber(modid = SnowUpdate.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ModEventBusEvents {
@@ -38,6 +39,7 @@ public class ModEventBusEvents {
     public static void registerAttributes(EntityAttributeCreationEvent event){
         event.put(SnowEntityRegistry.JUVENILE_YETI.get(), JuvenileYetiEntity.createAttributes().build());
         event.put(SnowEntityRegistry.TITAN_YETI.get(), TitanYetiEntity.createAttributes().build());
+        event.put(SnowEntityRegistry.PENGUIN.get(), PenguinEntity.createAttributes().build());
     }
 
 }

@@ -23,9 +23,9 @@ import net.minecraft.world.level.levelgen.feature.DripstoneUtils;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
 import net.minecraft.world.level.levelgen.feature.configurations.DripstoneClusterConfiguration;
-import net.technic.snow_update.blocks.PointedIceStalactite;
-import net.technic.snow_update.blocks.properties.IceStalactiteThickness;
-import net.technic.snow_update.registry.SnowBlockRegistry;
+import net.technic.snow_update.block.PointedIceStalactite;
+import net.technic.snow_update.block.properties.IceStalactiteThickness;
+import net.technic.snow_update.init.SnowBlockRegistry;
 
 public class IceStalactiteFeature extends Feature<DripstoneClusterConfiguration>{
    public IceStalactiteFeature(Codec<DripstoneClusterConfiguration> p_159575_) {

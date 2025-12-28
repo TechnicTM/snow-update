@@ -12,7 +12,7 @@ import net.minecraft.world.entity.ai.behavior.Behavior;
 import net.minecraft.world.entity.ai.memory.MemoryModuleType;
 import net.minecraft.world.entity.ai.memory.MemoryStatus;
 import net.technic.snow_update.entity.TitanYetiEntity;
-import net.technic.snow_update.registry.SnowMemoryModulesRegistry;
+import net.technic.snow_update.init.SnowMemoryModulesRegistry;
 
 public class SlamAttack extends Behavior<TitanYetiEntity>{
 

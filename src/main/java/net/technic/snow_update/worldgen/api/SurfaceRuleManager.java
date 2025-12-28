@@ -11,7 +11,7 @@ import com.google.common.collect.Maps;
 import com.mojang.datafixers.util.Pair;
 
 import net.minecraft.world.level.levelgen.SurfaceRules;
-import net.technic.snow_update.worldgen.TBSurfaceRuleData;
+import net.technic.snow_update.worldgen.surface.TBSurfaceRuleData;
 import net.technic.snow_update.worldgen.surface.NamespacedSurfaceRuleSource;
 
 public class SurfaceRuleManager {

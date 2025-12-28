@@ -7,7 +7,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.ViewportEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.technic.snow_update.worldgen.biomes.SnowUpdateBiomes;
+import net.technic.snow_update.worldgen.biome.SnowUpdateBiomes;
 
 @Mod.EventBusSubscriber(value = Dist.CLIENT, modid = "snow_update", bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class ForgeEventBus {

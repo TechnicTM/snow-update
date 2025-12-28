@@ -32,8 +32,8 @@ import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSi
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
 import net.minecraft.world.level.levelgen.placement.CaveSurface;
 import net.technic.snow_update.SnowUpdate;
-import net.technic.snow_update.registry.SnowBlockRegistry;
-import net.technic.snow_update.registry.SnowFeaturesRegistry;
+import net.technic.snow_update.init.SnowBlockRegistry;
+import net.technic.snow_update.init.SnowFeaturesRegistry;
 import net.technic.snow_update.worldgen.config.FrozenSpringConfig;
 import net.technic.snow_update.worldgen.config.IceCrystalSpikeConfig;
 import net.technic.snow_update.worldgen.tree.FrostwoodFoliagePlacer;

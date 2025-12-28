@@ -14,7 +14,7 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
-import net.technic.snow_update.registry.SnowItemsRegistry;
+import net.technic.snow_update.init.SnowItemsRegistry;
 
 public class SnowUpdateRecipeProvider extends RecipeProvider implements IConditionBuilder {
 

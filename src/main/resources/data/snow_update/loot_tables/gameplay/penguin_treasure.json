@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:gift",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "minecraft:item", "name": "minecraft:cod", "weight": 40 },
+        { "type": "minecraft:item", "name": "minecraft:salmon", "weight": 40 },
+
+        { "type": "minecraft:item", "name": "minecraft:leather_boots", "weight": 15 },
+
+        { "type": "minecraft:item", "name": "minecraft:tripwire_hook", "weight": 10 },
+        { "type": "minecraft:item", "name": "minecraft:string", "weight": 10 },
+
+        { "type": "minecraft:item", "name": "snow_update:glacier_gem", "weight": 5 },
+        { "type": "minecraft:item", "name": "snow_update:icebud", "weight": 5 },
+        { "type": "minecraft:item", "name": "minecraft:nautilus_shell", "weight": 5 },
+        { "type": "minecraft:item", "name": "minecraft:enchanted_book", "weight": 5,
+          "functions": [
+            { "function": "minecraft:enchant_randomly" }
+          ]
+        },
+
+        { "type": "minecraft:item", "name": "minecraft:name_tag", "weight": 2 }
+      ]
+    }
+  ]
+}

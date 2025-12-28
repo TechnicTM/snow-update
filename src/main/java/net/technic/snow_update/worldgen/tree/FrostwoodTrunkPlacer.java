@@ -18,7 +18,7 @@ import net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacer.FoliageAttachment;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.TrunkPlacer;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.TrunkPlacerType;
-import net.technic.snow_update.registry.SnowUpdateTrunkPlacerRegistry;
+import net.technic.snow_update.init.SnowUpdateTrunkPlacerRegistry;
 
 public class FrostwoodTrunkPlacer extends TrunkPlacer{
     public static final Codec<FrostwoodTrunkPlacer> COEDC = RecordCodecBuilder.create(pFrostwoodTrunkPlacerInstace -> 

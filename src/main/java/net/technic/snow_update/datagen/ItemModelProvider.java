@@ -10,7 +10,7 @@ import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
 import net.technic.snow_update.SnowUpdate;
-import net.technic.snow_update.registry.SnowItemsRegistry;
+import net.technic.snow_update.init.SnowItemsRegistry;
 
 public class ItemModelProvider extends net.minecraftforge.client.model.generators.ItemModelProvider{
 

@@ -14,7 +14,6 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.Brain;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.behavior.DoNothing;
-import net.minecraft.world.entity.ai.behavior.LookAtTargetSink;
 import net.minecraft.world.entity.ai.behavior.MeleeAttack;
 import net.minecraft.world.entity.ai.behavior.RandomStroll;
 import net.minecraft.world.entity.ai.behavior.RunOne;
@@ -30,7 +29,7 @@ import net.minecraft.world.entity.ai.sensing.SensorType;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.schedule.Activity;
 import net.technic.snow_update.entity.TitanYetiEntity;
-import net.technic.snow_update.registry.SnowMemoryModulesRegistry;
+import net.technic.snow_update.init.SnowMemoryModulesRegistry;
 
 public class TitanYetiAI {
     private static final List<SensorType<? extends Sensor<? super TitanYetiEntity>>> SENSOR_TYPES = List.of(SensorType.NEAREST_PLAYERS, SensorType.NEAREST_LIVING_ENTITIES);

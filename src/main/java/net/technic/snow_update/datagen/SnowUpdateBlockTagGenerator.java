@@ -73,6 +73,10 @@ public class SnowUpdateBlockTagGenerator extends BlockTagsProvider{
             SnowBlockRegistry.POLISHED_HOWLITE_WALL.get(),
             SnowBlockRegistry.BLUE_ICE_BRICKS_2_WALL.get()
             );
+        this.tag(BlockTags.FLOWERS).add(
+                SnowBlockRegistry.ICEBUD.get()
+        );
+
         this.tag(BlockTags.SNOW_LAYER_CANNOT_SURVIVE_ON).add(SnowBlockRegistry.KEY_STONE.get());
     }
 

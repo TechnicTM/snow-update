@@ -27,9 +27,10 @@ import net.technic.snow_update.entity.TitanYetiEntity;
 import net.technic.snow_update.init.SnowBlockRegistry;
 import net.technic.snow_update.init.SnowItemsRegistry;
 import net.technic.snow_update.init.SnowSoundsRegistry;
+
 import java.util.List;
 
-public class KeyStone extends HorizontalDirectionalBlock{
+public class KeyStone extends HorizontalDirectionalBlock {
     public static final BooleanProperty HAS_KEY = BooleanProperty.create("key");
     private static BlockPattern icechunkShape;
 
@@ -46,28 +47,47 @@ public class KeyStone extends HorizontalDirectionalBlock{
     @Override
     public boolean useShapeForLightOcclusion(BlockState pState) {
         return true;
-        
     }
-    
+
     @Override
-    public InteractionResult use(BlockState pState, Level pLevel, BlockPos pPos, Player pPlayer, InteractionHand pHand, BlockHitResult pHit) {
+    public InteractionResult use(BlockState pState, Level pLevel, BlockPos pPos,
+                                 Player pPlayer, InteractionHand pHand, BlockHitResult pHit) {
+
         ItemStack pItem = pPlayer.getItemInHand(pHand);
-        if (!pLevel.isClientSide()){
-            if (pItem.getItem() == SnowItemsRegistry.GLACIER_SHARD.get() && pState.getValue(HAS_KEY) == false){
+
+        if (!pLevel.isClientSide()) {
+
+            // Permanently locked: once a shard is inserted, it cannot be removed.
+            if (pState.getValue(HAS_KEY)) {
+                // Optional: play a "locked" sound to give feedback
+                // pLevel.playSound(null, pPos, SoundEvents.IRON_DOOR_CLOSE, SoundSource.BLOCKS, 1.0F, 1.0F);
+                return InteractionResult.SUCCESS;
+            }
+
+            // Insert shard only if empty
+            if (pItem.getItem() == SnowItemsRegistry.GLACIER_SHARD.get()) {
+
                 pLevel.setBlock(pPos, pState.setValue(HAS_KEY, true), 3);
-                pItem.setCount(pItem.getCount()-1);
+
+                // Consume exactly one shard safely
+                pItem.shrink(1);
+
                 pLevel.playSound(null, pPos, SnowSoundsRegistry.KEYSTONE_SHARD_PLACE.get(), SoundSource.AMBIENT, 16F, 1F);
+
                 BlockPattern.BlockPatternMatch blockPatternMatch = getOrCreateIceChunkShape().find(pLevel, pPos);
                 if (blockPatternMatch != null) {
                     int[] offset = findOffset(blockPatternMatch);
-                    
+
                     BlockPos blockPos = blockPatternMatch.getFrontTopLeft().offset(offset[1], 6, offset[0]);
-                    System.out.println(blockPos+" "+blockPatternMatch.getUp());
-                    BlockPos blockPos2 = blockPos.offset(7,-5,7);
+                    System.out.println(blockPos + " " + blockPatternMatch.getUp());
+
+                    BlockPos blockPos2 = blockPos.offset(7, -5, 7);
+
                     List<TitanYetiEntity> list = pLevel.getEntitiesOfClass(TitanYetiEntity.class, new AABB(blockPos, blockPos2));
                     for (TitanYetiEntity t : list) {
                         t.setShouldUnfreeze(true);
                     }
+
                     for (int x = blockPos.getX(); x <= blockPos2.getX(); x++) {
                         for (int y = blockPos.getY(); y >= blockPos2.getY(); y--) {
                             for (int z = blockPos.getZ(); z <= blockPos2.getZ(); z++) {
@@ -79,35 +99,49 @@ public class KeyStone extends HorizontalDirectionalBlock{
                             }
                         }
                     }
-                    
-                    
                 }
-            } else if (pState.getValue(HAS_KEY) == true){
-                pLevel.setBlock(pPos, pState.setValue(HAS_KEY, false), 3);
-                pLevel.playSound(null, pPos, SoundEvents.ITEM_FRAME_REMOVE_ITEM, SoundSource.AMBIENT, 16F, 1F);
-                ItemStack out = new ItemStack(SnowItemsRegistry.GLACIER_SHARD.get());
-                if (!pPlayer.addItem(out))
-                    pPlayer.drop(pItem, false);
-                    
-            } 
+            } else {
+                //feedback when interacting without the shard
+                //pLevel.playSound(null, pPos, SoundEvents.UI_BUTTON_CLICK, SoundSource.BLOCKS, 0.6F, 1.2F);
+            }
         }
 
         return InteractionResult.SUCCESS;
     }
 
+    @Override
     public BlockState getStateForPlacement(BlockPlaceContext pContext) {
-        return this.defaultBlockState().setValue(FACING, pContext.getHorizontalDirection().getOpposite()).setValue(HAS_KEY, Boolean.valueOf(false));
+        return this.defaultBlockState()
+                .setValue(FACING, pContext.getHorizontalDirection().getOpposite())
+                .setValue(HAS_KEY, Boolean.valueOf(false));
     }
 
-    
     public static BlockPattern getOrCreateIceChunkShape() {
         if (icechunkShape == null) {
-            icechunkShape = BlockPatternBuilder.start().aisle("?????@?????", "???????????", "???????????", "???????????", "???????????", "@?????????@", "???????????", "???????????", "???????????", "???????????", "?????@?????")
-            .where('?', BlockInWorld.hasState(BlockStatePredicate.ANY)).where('@', BlockInWorld.hasState(BlockStatePredicate.forBlock(SnowBlockRegistry.KEY_STONE.get()).where(HAS_KEY, Predicates.equalTo(true))))
-            .where('^', BlockInWorld.hasState(BlockStatePredicate.forBlock(SnowBlockRegistry.GLACIER_ICE.get()))).build();
-            
+            icechunkShape = BlockPatternBuilder.start()
+                    .aisle(
+                            "?????@?????",
+                            "???????????",
+                            "???????????",
+                            "???????????",
+                            "???????????",
+                            "@?????????@",
+                            "???????????",
+                            "???????????",
+                            "???????????",
+                            "???????????",
+                            "?????@?????"
+                    )
+                    .where('?', BlockInWorld.hasState(BlockStatePredicate.ANY))
+                    .where('@', BlockInWorld.hasState(
+                            BlockStatePredicate.forBlock(SnowBlockRegistry.KEY_STONE.get())
+                                    .where(HAS_KEY, Predicates.equalTo(true))
+                    ))
+                    .where('^', BlockInWorld.hasState(
+                            BlockStatePredicate.forBlock(SnowBlockRegistry.GLACIER_ICE.get())
+                    ))
+                    .build();
         }
-
         return icechunkShape;
     }
 
@@ -129,5 +163,4 @@ public class KeyStone extends HorizontalDirectionalBlock{
         }
         return offset;
     }
-
 }

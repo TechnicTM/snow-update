@@ -1,0 +1,52 @@
+{
+  "variants": {
+    "light=0": {
+      "model": "snow_update:block/icebud_bottom"
+    },
+    "light=1": {
+      "model": "snow_update:block/icebud_bottom_glow"
+    },
+    "light=10": {
+      "model": "snow_update:block/icebud_bottom_glow"
+    },
+    "light=11": {
+      "model": "snow_update:block/icebud_bottom_glow"
+    },
+    "light=12": {
+      "model": "snow_update:block/icebud_bottom_glow"
+    },
+    "light=13": {
+      "model": "snow_update:block/icebud_bottom_glow"
+    },
+    "light=14": {
+      "model": "snow_update:block/icebud_bottom_glow"
+    },
+    "light=15": {
+      "model": "snow_update:block/icebud_bottom_glow"
+    },
+    "light=2": {
+      "model": "snow_update:block/icebud_bottom_glow"
+    },
+    "light=3": {
+      "model": "snow_update:block/icebud_bottom_glow"
+    },
+    "light=4": {
+      "model": "snow_update:block/icebud_bottom_glow"
+    },
+    "light=5": {
+      "model": "snow_update:block/icebud_bottom_glow"
+    },
+    "light=6": {
+      "model": "snow_update:block/icebud_bottom_glow"
+    },
+    "light=7": {
+      "model": "snow_update:block/icebud_bottom_glow"
+    },
+    "light=8": {
+      "model": "snow_update:block/icebud_bottom_glow"
+    },
+    "light=9": {
+      "model": "snow_update:block/icebud_bottom_glow"
+    }
+  }
+}

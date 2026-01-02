@@ -4,26 +4,14 @@ import java.util.function.Supplier;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.LevelReader;
-import net.minecraft.world.level.block.AmethystClusterBlock;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.DoorBlock;
-import net.minecraft.world.level.block.DoublePlantBlock;
-import net.minecraft.world.level.block.FenceBlock;
-import net.minecraft.world.level.block.FenceGateBlock;
-import net.minecraft.world.level.block.LeavesBlock;
-import net.minecraft.world.level.block.SaplingBlock;
-import net.minecraft.world.level.block.SlabBlock;
-import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.block.StairBlock;
-import net.minecraft.world.level.block.TallGrassBlock;
-import net.minecraft.world.level.block.TrapDoorBlock;
-import net.minecraft.world.level.block.WallBlock;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
@@ -33,11 +21,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.technic.snow_update.SnowUpdate;
-import net.technic.snow_update.block.BuddingIceCrystal;
-import net.technic.snow_update.block.FrostedWood;
-import net.technic.snow_update.block.GlacierIce;
-import net.technic.snow_update.block.KeyStone;
-import net.technic.snow_update.block.PointedIceStalactite;
+import net.technic.snow_update.block.*;
 import net.technic.snow_update.worldgen.tree.FrostwoodTreeGrower;
 
 public class SnowBlockRegistry {
@@ -272,8 +256,34 @@ public class SnowBlockRegistry {
     ()-> new AmethystClusterBlock(4, 3, BlockBehaviour.Properties.copy(Blocks.MEDIUM_AMETHYST_BUD)));
     public static final RegistryObject<Block> LARGE_ICE_CRYSTAL_BUD = registerBlock("large_ice_crystal_bud", 
     ()-> new AmethystClusterBlock(5, 3, BlockBehaviour.Properties.copy(Blocks.LARGE_AMETHYST_BUD)));
-    public static final RegistryObject<Block> ICE_CRYSTAL_CLUSTER = registerBlock("ice_crystal_cluster", 
+    public static final RegistryObject<Block> ICE_CRYSTAL_CLUSTER = registerBlock("ice_crystal_cluster",
     ()-> new AmethystClusterBlock(7, 3, BlockBehaviour.Properties.copy(Blocks.AMETHYST_CLUSTER)));
+
+    public static final RegistryObject<Block> ICEBUD = registerBlock("icebud",
+            () -> new IcebudTopBlock(BlockBehaviour.Properties.copy(Blocks.TALL_GRASS)
+                    .noOcclusion()
+                    .noCollission()
+                    .lightLevel(s -> s.getValue(IcebudTopBlock.LIGHT))
+            )
+    );
+
+    public static final RegistryObject<Block> ICEBUD_BOTTOM = registerBlock("icebud_bottom",
+            () -> new IcebudBottomBlock(BlockBehaviour.Properties.copy(Blocks.TALL_GRASS)
+                    .noOcclusion()
+                    .noCollission()
+            )
+    );
+
+/*
+    public static final RegistryObject<FlowerBlock> DOUGLAS_IRIS =
+            registerBlock("douglas_iris",
+                    () -> new FlowerBlock(
+                            BuiltInRegistries.MOB_EFFECT.wrapAsHolder(MobEffects.ABSORPTION),
+                            6.0F,
+                            BlockBehaviour.Properties.copy(Blocks.POPPY)
+                    )
+            );
+*/
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String pName, Supplier<T> pSupplier){

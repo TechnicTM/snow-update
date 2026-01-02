@@ -1,4 +1,4 @@
-// 1.20.2	2024-05-20T19:00:02.5559222	Block States: snow_update
+// 1.20.2	2026-01-02T14:59:48.4141592	Block States: snow_update
 a4fdc98502e30d141f7e73567e81a4f49a596f46 assets/snow_update/blockstates/blue_ice_bricks.json
 b44994768d64841b91f4e343f4cf35911e98ece3 assets/snow_update/blockstates/blue_ice_bricks2.json
 ef6327601f044f6d053a85013e2353e68a87cb17 assets/snow_update/blockstates/blue_ice_bricks2_slab.json
@@ -57,6 +57,8 @@ a2d87b9cf21873fa580d83b2ecfc4f57b10ce337 assets/snow_update/blockstates/howlite_
 73965d5a6c9c824d401a3c7f6ca9547e8723039b assets/snow_update/blockstates/howlite_tiles_stairs.json
 c4fc8df80a8cc5a4e09e7480a354dbf52aeab8f0 assets/snow_update/blockstates/howlite_tiles_wall.json
 fed6b3d447d2446884ac2e1674d81778e979065f assets/snow_update/blockstates/howlite_wall.json
+158e6a90247adbc2710a1bf78aae14f8b7ad9183 assets/snow_update/blockstates/icebud.json
+6e2895b71d2579de7f5523f60c954640372961d7 assets/snow_update/blockstates/icebud_bottom.json
 06e25f4b8c385d9728e13b6058bb0987104ced4e assets/snow_update/blockstates/ice_bricks.json
 00628d916b52a2e24834d69d085d86b2b937fa9e assets/snow_update/blockstates/ice_bricks_slab.json
 736a81bc15ccf087aded64263893bf2274ed0012 assets/snow_update/blockstates/ice_bricks_stairs.json
@@ -230,6 +232,10 @@ b67d2859029d90a16027dd1a10abc0285c6c19bb assets/snow_update/models/block/howlite
 2910bdb7d0e2ef6da3bd2481cedc63c2fd070d1e assets/snow_update/models/block/howlite_wall_post.json
 1c63a07e755fc0580521650613651085983fdf4f assets/snow_update/models/block/howlite_wall_side.json
 9459f32b3b67b45d20b20c1ff6bb30103c70441e assets/snow_update/models/block/howlite_wall_side_tall.json
+a9d14a52e519f08bad490aca5380d21ca8ed8af7 assets/snow_update/models/block/icebud.json
+e9c96a2cf88c4c79c5ad28223803fda4864c8ee3 assets/snow_update/models/block/icebud_bottom.json
+7d311adbc9b19f742eb1a70f23d52dc270bf1f44 assets/snow_update/models/block/icebud_bottom_glow.json
+4a2b4be7e746f59be3a7753586ec10221676da99 assets/snow_update/models/block/icebud_glow.json
 b4b035a9de9cf8156ecd63367aeec8e64c8e4b83 assets/snow_update/models/block/ice_bricks.json
 938cb90d919def9ed3b14a42d7cfa3b77277ef0c assets/snow_update/models/block/ice_bricks_slab.json
 cf175de048fc3716e080288b848af88c2ac9243e assets/snow_update/models/block/ice_bricks_slab_top.json
@@ -397,6 +403,7 @@ a44f4d01006e87d94720ba69caf5913995008081 assets/snow_update/models/item/howlite_
 1b4eba935a4bca91a251db3ebded414aa8837147 assets/snow_update/models/item/howlite_tiles_stairs.json
 18290089a0497b4c6258b1b3c7d0f4cbe0171672 assets/snow_update/models/item/howlite_tiles_wall.json
 b0287c7e2eb5ca6df42422590391d9320ac15d6e assets/snow_update/models/item/howlite_wall.json
+4d85fae8bbb98c8859078145842985669c2c8565 assets/snow_update/models/item/icebud.json
 34fbfd3559a021cfa6923ca5f54ad029bfe06d5d assets/snow_update/models/item/ice_bricks.json
 07af420a6aab34af084c75160e5f3a09f3ea57ea assets/snow_update/models/item/ice_bricks_slab.json
 55e8fe3ed74446090c35c29c7efad3f90fa531cf assets/snow_update/models/item/ice_bricks_stairs.json

@@ -1,5 +1,6 @@
 package net.technic.snow_update.datagen;
 
+import net.technic.snow_update.block.*;
 import org.jetbrains.annotations.NotNull;
 
 import net.minecraft.core.Direction;
@@ -24,8 +25,6 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.technic.snow_update.SnowUpdate;
-import net.technic.snow_update.block.GlacierIce;
-import net.technic.snow_update.block.KeyStone;
 import net.technic.snow_update.block.properties.SnowUpdateBlockProperties;
 import net.technic.snow_update.init.SnowBlockRegistry;
 
@@ -42,6 +41,7 @@ public class SnowUpdateBlockStateProvider extends BlockStateProvider{
     protected void registerStatesAndModels() {
         createKeyStoneBlock();
         createGlacierIce();
+        createIcebudCeiling();
         logBlock(((RotatedPillarBlock)SnowBlockRegistry.FROSTED_LOG.get()));
         axisBlock(((RotatedPillarBlock)SnowBlockRegistry.FROSTED_WOOD.get()), blockTexture(SnowBlockRegistry.FROSTED_LOG.get()), blockTexture(SnowBlockRegistry.FROSTED_LOG.get()));
         axisBlock(((RotatedPillarBlock)SnowBlockRegistry.STRIPPED_FROSTED_LOG.get()), blockTexture(SnowBlockRegistry.STRIPPED_FROSTED_LOG.get()), 
@@ -93,7 +93,6 @@ public class SnowUpdateBlockStateProvider extends BlockStateProvider{
         blockAndItem(SnowBlockRegistry.ICE_SPIKE_BLOCK);
         blockAndItem(SnowBlockRegistry.ICE_BRICKS);
         dripstone(SnowBlockRegistry.POINTED_ICE_STALACTITE);
-        
 
         fenceBlock(((FenceBlock)SnowBlockRegistry.FROSTED_WOOD_FENCE.get()), blockTexture(SnowBlockRegistry.FROSTED_PLANKS.get()));
 
@@ -409,7 +408,36 @@ public class SnowUpdateBlockStateProvider extends BlockStateProvider{
         });
         
     }
-    
-    
+
+    private void createIcebudCeiling() {
+        // Top anchor blockstate
+        Block topBlock = SnowBlockRegistry.ICEBUD.get();
+        ResourceLocation topId = ForgeRegistries.BLOCKS.getKey(topBlock);
+        String topName = topId.getPath();
+
+        ModelFile top = models().cross(topName, modLoc("block/icebud_top")).renderType("cutout");
+        ModelFile topGlow = models().cross(topName + "_glow", modLoc("block/icebud_top_glow")).renderType("cutout");
+
+        getVariantBuilder(topBlock).forAllStates(state -> {
+            int light = state.getValue(IcebudTopBlock.LIGHT);
+            return ConfiguredModel.builder().modelFile(light > 0 ? topGlow : top).build();
+        });
+
+        itemModels().withExistingParent(topName, mcLoc("item/generated"))
+                .texture("layer0", modLoc("block/icebud_top"));
+
+        // Bottom blockstate
+        Block bottomBlock = SnowBlockRegistry.ICEBUD_BOTTOM.get();
+        ResourceLocation bottomId = ForgeRegistries.BLOCKS.getKey(bottomBlock);
+        String bottomName = bottomId.getPath();
+
+        ModelFile bottom = models().cross(bottomName, modLoc("block/icebud_bottom")).renderType("cutout");
+        ModelFile bottomGlow = models().cross(bottomName + "_glow", modLoc("block/icebud_bottom_glow")).renderType("cutout");
+
+        getVariantBuilder(bottomBlock).forAllStates(state -> {
+            int light = state.getValue(IcebudBottomBlock.LIGHT);
+            return ConfiguredModel.builder().modelFile(light > 0 ? bottomGlow : bottom).build();
+        });
+    }
 
 }

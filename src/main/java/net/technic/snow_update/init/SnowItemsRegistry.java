@@ -52,7 +52,14 @@ public class SnowItemsRegistry {
     public static final RegistryObject<Item> YETI_FUR_LEGGINGS = ITEMS.register("yeti_fur_leggings", ()-> new YetiFurArmor(SnowUpdateArmorMaterials.YETI_FUR, ArmorItem.Type.LEGGINGS, new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> YETI_FUR_BOOTS = ITEMS.register("yeti_fur_boots", ()-> new YetiFurArmor(SnowUpdateArmorMaterials.YETI_FUR, ArmorItem.Type.BOOTS, new Item.Properties().stacksTo(1)));
 
-    public static final RegistryObject<Item> ICE_WAND = ITEMS.register("ice_wand", ()-> new IceWand(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> ICE_WAND = ITEMS.register(
+            "ice_wand",
+            () -> new IceWand(new Item.Properties()
+                    .stacksTo(1)
+                    .durability(40)
+            )
+    );
+
 
     public static final RegistryObject<Item> FROSTWOOD_BOAT = ITEMS.register("frostwood_boat", ()-> new SnowBoatItem(false, SnowUpdateBoats.Type.FROSTWOOD, new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> FROSTWOOD_CHESTBOAT = ITEMS.register("frostwood_chest_boat", ()-> new SnowBoatItem(true, SnowUpdateBoats.Type.FROSTWOOD, new Item.Properties().stacksTo(1)));

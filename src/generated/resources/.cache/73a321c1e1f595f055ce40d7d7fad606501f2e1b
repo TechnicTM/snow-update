@@ -1,5 +1,6 @@
-// 1.20.2	2024-04-18T15:02:06.0411706	Tags for minecraft:block mod id snow_update
+// 1.20.2	2025-12-31T11:16:17.8796626	Tags for minecraft:block mod id snow_update
 abdc2e40e02fa3b0b79083d3ed4530c56585aca0 data/minecraft/tags/blocks/fences.json
+1b08749ac32f9b83da7a40e44bf0a39fdbd3ee5a data/minecraft/tags/blocks/flowers.json
 272e39496025b309a324ac9113b7eb1a6599675c data/minecraft/tags/blocks/logs_that_burn.json
 d70d6be62f2907630b45e3fe20076ffcb18fcc1c data/minecraft/tags/blocks/planks.json
 f820da7e46a795ff865e1a2820ae2270b0fb296a data/minecraft/tags/blocks/snow_layer_cannot_survive_on.json

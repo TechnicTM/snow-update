@@ -7,12 +7,24 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.technic.snow_update.SnowUpdate;
 import net.technic.snow_update.block.GlacierIceBlockEntity;
+import net.technic.snow_update.block.IcebudBlockEntity;
 
 public class SnowBlockEntitiesRegistry {
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, SnowUpdate.MOD_ID);
 
-    public static final RegistryObject<BlockEntityType<GlacierIceBlockEntity>> GLACIER_BLOCK_ENTITY = BLOCK_ENTITIES.register("glacier_block_entity", ()-> BlockEntityType.Builder.of(GlacierIceBlockEntity::new, 
-        SnowBlockRegistry.GLACIER_ICE.get()).build(null));
+    public static final RegistryObject<BlockEntityType<GlacierIceBlockEntity>> GLACIER_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("glacier_block_entity", ()-> BlockEntityType.Builder.of(
+                    GlacierIceBlockEntity::new,
+                    SnowBlockRegistry.GLACIER_ICE.get()
+            ).build(null));
+
+    public static final RegistryObject<BlockEntityType<IcebudBlockEntity>> ICEBUD =
+            BLOCK_ENTITIES.register("icebud", () -> BlockEntityType.Builder.of(
+                            IcebudBlockEntity::new,
+                            SnowBlockRegistry.ICEBUD.get()
+                    ).build(null)
+            );
+
 
     public static void register(IEventBus pBus) {
         BLOCK_ENTITIES.register(pBus);
